@@ -1,10 +1,22 @@
 *.class
 *.log
-logs
-target
-/.idea
-/.idea_modules
-/.classpath
-/.project
-/.settings
 
+# sbt specific
+.cache
+.cache-main
+.cache-tests
+.history
+.lib/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+
+# Ignore Eclipse files
+.project
+.classpath
+.prefs
+.settings
+/bin
