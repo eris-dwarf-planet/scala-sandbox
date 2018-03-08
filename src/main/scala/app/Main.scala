@@ -6,6 +6,13 @@ import app.example.HelloWorld
 import app.example.Point
 import app.example.PrinterB
 import app.example.PrinterC
+import app.example.Robot
+import app.example.Robot2
+import app.example.TraitClassD
+import app.example.TraitClassE
+import app.example.TraitClassF
+import app.example.TraitClassH
+import app.example.TraitClassI
 import app.example.User
 
 object Main {
@@ -13,8 +20,9 @@ object Main {
     val ex1 = new HelloWorld()
     ex1.executeSample(Array("hello-", "hoge"))
 
-    val ex2 = new User("dwango", 13)
-    User.executeSample(ex2)
+    val ex2 = new User("dwango", 13, 50)
+    User.executeSample1(ex2)
+    User.executeSample2()
 
     val ex3 = new Expression()
     ex3.executeSample1()
@@ -30,5 +38,16 @@ object Main {
 
     PrinterB.executeSample()
     PrinterC.executeSample()
+
+    TraitClassD.executeSample()
+    TraitClassE.executeSample()
+    TraitClassF.executeSample()
+
+    TraitClassH.executeSample()
+    TraitClassI.executeSample()
+
+    Robot.executeSample()
+    Robot2.executeSample()
+
   }
 }
