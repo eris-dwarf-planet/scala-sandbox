@@ -1,6 +1,7 @@
 package app
 
 import app.example.Adder
+import app.example.Cell
 import app.example.Expression
 import app.example.HelloWorld
 import app.example.Point
@@ -14,6 +15,9 @@ import app.example.TraitClassF
 import app.example.TraitClassH
 import app.example.TraitClassI
 import app.example.User
+import app.example.Pair
+import app.example.TestStack
+import app.example.ExampleCollection
 
 object Main {
   def main(args: Array[String]): Unit = {
@@ -48,6 +52,20 @@ object Main {
 
     Robot.executeSample()
     Robot2.executeSample()
+
+    Cell.executeSample()
+    Pair.executeSample()
+    TestStack.executeSample()
+
+    ExampleCollection.executeSample1()
+    ExampleCollection.executeSample2()
+    ExampleCollection.executeSample3()
+    ExampleCollection.executeSample4()
+    ExampleCollection.executeSample5()
+    ExampleCollection.executeSample6()
+    ExampleCollection.executeSample7()
+    ExampleCollection.executeSample8()
+    ExampleCollection.executeSample9()
 
   }
 }
