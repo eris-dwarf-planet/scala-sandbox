@@ -18,6 +18,7 @@ import app.example.User
 import app.example.Pair
 import app.example.TestStack
 import app.example.ExampleCollection
+import app.example.ExampleCaseClass
 
 object Main {
   def main(args: Array[String]): Unit = {
@@ -66,6 +67,11 @@ object Main {
     ExampleCollection.executeSample7()
     ExampleCollection.executeSample8()
     ExampleCollection.executeSample9()
+
+    ExampleCaseClass.executeSample1()
+    ExampleCaseClass.executeSample2()
+    ExampleCaseClass.executeSample3()
+    ExampleCaseClass.executeSample4()
 
   }
 }
