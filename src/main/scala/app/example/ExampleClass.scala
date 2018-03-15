@@ -1,17 +1,21 @@
 package app.example
 
-class User(private val name: String, private val age: Int, private val weight: Int)
+class User(private val name: String,
+           private val age: Int,
+           private val weight: Int)
 
 object User {
   def executeSample1(user: User) = {
     println("------------------")
-    println("name: " + user.name + " age: " + user.age + " weight: " + user.weight)
+    println(
+      "name: " + user.name + " age: " + user.age + " weight: " + user.weight)
   }
 
   def executeSample2() = {
     println("------------------")
     val user = new User("Taro", 20, 70)
-    println("name: " + user.name + " age: " + user.age + " weight: " + user.weight)
+    println(
+      "name: " + user.name + " age: " + user.age + " weight: " + user.weight)
   }
 
 }

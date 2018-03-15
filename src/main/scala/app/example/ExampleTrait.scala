@@ -1,17 +1,13 @@
 package app.example
 
 // ---------
-trait TraitA {
-}
+trait TraitA {}
 
-trait TraitB {
-}
+trait TraitB {}
 
-class TraitClassA {
-}
+class TraitClassA {}
 
-class TraitClassB extends TraitClassA with TraitA with TraitB {
-}
+class TraitClassB extends TraitClassA with TraitA with TraitB {}
 
 // ---------
 trait TraitC {
@@ -19,8 +15,7 @@ trait TraitC {
   def printName(): Unit = println(name)
 }
 
-class TraitClassC(val name: String) extends TraitC {
-}
+class TraitClassC(val name: String) extends TraitC {}
 
 object ObjectC {
   val a = new TraitClassC("dwango")
@@ -155,4 +150,3 @@ object Robot2 {
     obj.greet()
   }
 }
-

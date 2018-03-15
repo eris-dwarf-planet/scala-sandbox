@@ -6,4 +6,3 @@ class HelloWorld {
     println("Hello, World! : " + args.mkString)
   }
 }
-

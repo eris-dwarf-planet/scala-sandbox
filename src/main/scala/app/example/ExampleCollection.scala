@@ -11,7 +11,7 @@ class ExampleCollection {
 
   def joinByComma(start: Int, end: Int): String = {
     val array = (start to end).toList
-    return array.mkString(",")
+    array.mkString(",")
   }
 
   def reverse[T](list: List[T]): List[T] = {
@@ -19,7 +19,9 @@ class ExampleCollection {
   }
 
   def sum(list: List[Int]): Int = {
-    list.foldRight(0) { (a, b) => a + b }
+    list.foldRight(0) { (a, b) =>
+      a + b
+    }
   }
 
   def mul(list: List[Int]): Int = {
@@ -28,20 +30,26 @@ class ExampleCollection {
 
   def mkString[T](list: List[T])(sep: String): String = {
     list match {
-      case Nil => ""
+      case Nil     => ""
       case x :: xs => xs.foldLeft(x.toString())((x, y) => x + sep + y)
     }
   }
 
   def map[T, U](list: List[T])(f: T => U): List[U] = {
     //    list.foldLeft(Nil: List[U]) { (x, y) => x :+ f(y) }
-    list.foldLeft(Nil: List[U]) { (x, y) => f(y) :: x }.reverse
+    list
+      .foldLeft(Nil: List[U]) { (x, y) =>
+        f(y) :: x
+      }
+      .reverse
   }
 
   def filter[T](list: List[T])(f: T => Boolean): List[T] = {
-    list.foldLeft(Nil: List[T]) { (x, y) =>
-      if (f(y)) y :: x else x
-    }.reverse
+    list
+      .foldLeft(Nil: List[T]) { (x, y) =>
+        if (f(y)) y :: x else x
+      }
+      .reverse
   }
 
   def count[T](list: List[T])(f: T => Boolean): Int = {
@@ -99,6 +107,12 @@ object ExampleCollection {
 
     val a6 = List(1, 2).++(List(3, 4, 5))
     println("list a6: " + a6.mkString(","))
+
+    val a7 = List(1, 2, 3, 4) :+ 5
+    println("list a7: " + a7.mkString(","))
+
+    val a8 = 5 :: List(1, 2, 3, 4)
+    println("list a8: " + a8.mkString(","))
 
     val obj = new ExampleCollection()
     println(obj.joinByComma(1, 10))
@@ -168,7 +182,9 @@ object ExampleCollection {
     println("count: " + obj.count(list1)(x => x % 2 == 0))
 
     println("------------------")
-    println("flatMap: " + List(1, 2, 3).flatMap { e => List(4, 5).map(g => e * g) })
+    println("flatMap: " + List(1, 2, 3).flatMap { e =>
+      List(4, 5).map(g => e * g)
+    })
 
   }
 

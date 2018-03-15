@@ -15,6 +15,12 @@ class Expression {
     }
 
     println(res)
+
+    val hoge1: String = new String("hoge1")
+    val hoge2: String = new String("hoge2")
+    println("string equals 1: " + (hoge1.equals(hoge2)))
+    println("string equals 2: " + (hoge1 == hoge2))
+
   }
 
   def executeSample2(): Unit = {
@@ -48,8 +54,8 @@ class Expression {
     val taro = "Taro"
     val res = {
       taro match {
-        case "Taro" => "Male"
-        case "Jiro" => "Male"
+        case "Taro"   => "Male"
+        case "Jiro"   => "Male"
         case "Hanako" => "Female"
       }
     }
@@ -75,9 +81,12 @@ class Expression {
 
     println("------------------")
     for (i <- 1 to 10) {
-      val s = new scala.util.Random(new java.security.SecureRandom()).alphanumeric.take(5).toList match {
-        case List(a, b, c, d, _) => List(a, b, c, d, a).mkString
-      }
+      val s =
+        new scala.util.Random(new java.security.SecureRandom()).alphanumeric
+          .take(5)
+          .toList match {
+          case List(a, b, c, d, _) => List(a, b, c, d, a).mkString
+        }
       println(s)
     }
 

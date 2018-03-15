@@ -20,3 +20,8 @@ project/plugins/project/
 .prefs
 .settings
 /bin
+
+# Ignore Eclipse files
+.idea/
+.idea/modules/
+.idea_modules/

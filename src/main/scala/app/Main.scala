@@ -1,24 +1,6 @@
 package app
 
-import app.example.Adder
-import app.example.Cell
-import app.example.Expression
-import app.example.HelloWorld
-import app.example.Point
-import app.example.PrinterB
-import app.example.PrinterC
-import app.example.Robot
-import app.example.Robot2
-import app.example.TraitClassD
-import app.example.TraitClassE
-import app.example.TraitClassF
-import app.example.TraitClassH
-import app.example.TraitClassI
-import app.example.User
-import app.example.Pair
-import app.example.TestStack
-import app.example.ExampleCollection
-import app.example.ExampleCaseClass
+import app.example.{Cell, ExampleCaseClass, ExampleCollection, ExampleFunction, ExampleFuture, ExampleImplicit, ExampleImplicit2, ExampleImplicit3, ExampleImplicit4, ExampleOption, Expression, HelloWorld, Pair, Person, Point, PrinterB, PrinterC, Robot, Robot2, Taps, TestStack, TraitClassD, TraitClassE, TraitClassF, TraitClassH, TraitClassI, User}
 
 object Main {
   def main(args: Array[String]): Unit = {
@@ -38,8 +20,9 @@ object Main {
     val p1 = new Point(1, 2)
     val p2 = new Point(3, 4)
     Point.executeSample(p1, p2)
+    Person.printWeight()
 
-    Adder.executeSample()
+    ExampleFunction.executeSample()
 
     PrinterB.executeSample()
     PrinterC.executeSample()
@@ -73,5 +56,16 @@ object Main {
     ExampleCaseClass.executeSample3()
     ExampleCaseClass.executeSample4()
 
+    ExampleOption.executeSample1()
+    ExampleOption.executeSample2()
+
+    ExampleImplicit.executeSample1()
+    Taps.executeSample1()
+    ExampleImplicit2.executeSample2()
+    ExampleImplicit3.executeSample3()
+    ExampleImplicit4.executeSample4()
+
+    ExampleFuture.executeSample1()
   }
+
 }
